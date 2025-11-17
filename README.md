@@ -157,9 +157,9 @@ Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e dis
 
 ## 🚀 Próximos Passos
 
-- [ ] Implementar Nível Novato
-- [ ] Implementar Nível Aventureiro
-- [ ] Implementar Nível Mestre
+- [x] Implementar Nível Novato
+- [x] Implementar Nível Aventureiro
+- [x] Implementar Nível Mestre
 - [ ] Adicionar testes unitários
 - [ ] Documentar código com comentários detalhados
 
