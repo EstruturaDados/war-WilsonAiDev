@@ -6,6 +6,33 @@ A empresa **MateCheck** contratou você para criar uma versão estruturada do WA
 
 ---
 
+## 📁 Estrutura do Projeto
+
+Este repositório contém implementações separadas para cada nível do desafio:
+
+- **`war-novato.c`** - Implementação do Nível Novato (cadastro de territórios com vetor estático)
+- **`war-aventureiro.c`** - Implementação do Nível Aventureiro (batalhas estratégicas com alocação dinâmica)
+- **`war-mestre.c`** - Implementação do Nível Mestre (missões e modularização total)
+- **`war.c`** - Arquivo base para desenvolvimento
+
+### Como compilar e executar
+
+```bash
+# Nível Novato
+gcc war-novato.c -o war-novato
+./war-novato
+
+# Nível Aventureiro
+gcc war-aventureiro.c -o war-aventureiro
+./war-aventureiro
+
+# Nível Mestre
+gcc war-mestre.c -o war-mestre
+./war-mestre
+```
+
+---
+
 ## 🧩 Nível Novato: Cadastro Inicial dos Territórios
 
 ### 🎯 Objetivo
