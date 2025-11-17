@@ -1,8 +1,26 @@
-# 🗺️ Desafio WAR Estruturado – Conquista de Territórios
+# 🗺️ Desafio WAR - Conquista de Territórios
 
-Bem-vindo ao **Desafio WAR Estruturado!** Inspirado no famoso jogo de estratégia, este desafio convida você a programar diferentes versões do jogo WAR, evoluindo seus conhecimentos em **C** à medida que avança pelos níveis **Novato**, **Aventureiro** e **Mestre**.
+![C](https://img.shields.io/badge/Language-C-blue.svg)
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Estácio](https://img.shields.io/badge/Universidade-Estácio%20de%20Sá-red.svg)
 
-A empresa **MateCheck** contratou você para criar uma versão estruturada do WAR. Cada nível propõe novas funcionalidades, conceitos e desafios de programação. **Você escolhe por onde começar!**
+## 📚 Sobre o Projeto
+
+Este projeto é parte do desafio proposto na disciplina de **Estrutura de Dados** do curso de **Engenharia de Software** da **Universidade Estácio de Sá**. O desafio consiste em desenvolver diferentes versões do jogo de estratégia **WAR**, aplicando conceitos fundamentais da linguagem C e estruturas de dados.
+
+O projeto foi estruturado em três níveis progressivos de dificuldade (**Novato**, **Aventureiro** e **Mestre**), permitindo uma evolução gradual no aprendizado de programação em C, desde conceitos básicos até técnicas avançadas de modularização e gerenciamento de memória.
+
+---
+
+## 🎯 Objetivo
+
+O objetivo principal é implementar um sistema de gerenciamento de territórios inspirado no jogo WAR, onde:
+- No **Nível Novato**, aprende-se a trabalhar com estruturas de dados básicas
+- No **Nível Aventureiro**, evolui-se para alocação dinâmica de memória e simulação de batalhas
+- No **Nível Mestre**, aplica-se modularização completa e sistema de missões
+
+Cada implementação foca em aspectos específicos da programação, permitindo consolidar conhecimentos teóricos através de uma aplicação prática e envolvente.
 
 ---
 
@@ -10,12 +28,16 @@ A empresa **MateCheck** contratou você para criar uma versão estruturada do WA
 
 Este repositório contém implementações separadas para cada nível do desafio:
 
-- **`war-novato.c`** - Implementação do Nível Novato (cadastro de territórios com vetor estático)
-- **`war-aventureiro.c`** - Implementação do Nível Aventureiro (batalhas estratégicas com alocação dinâmica)
-- **`war-mestre.c`** - Implementação do Nível Mestre (missões e modularização total)
-- **`war.c`** - Arquivo base para desenvolvimento
+```
+war-WilsonAiDev/
+├── war-novato.c       # Nível 1: Cadastro de territórios (vetor estático)
+├── war-aventureiro.c  # Nível 2: Batalhas estratégicas (alocação dinâmica)
+├── war-mestre.c       # Nível 3: Sistema de missões (modularização total)
+├── war.c              # Template base para desenvolvimento
+└── README.md
+```
 
-### Como compilar e executar
+### 🔧 Como Compilar e Executar
 
 ```bash
 # Nível Novato
@@ -33,140 +55,114 @@ gcc war-mestre.c -o war-mestre
 
 ---
 
-## 🧩 Nível Novato: Cadastro Inicial dos Territórios
+## 🧩 Níveis do Desafio
 
-### 🎯 Objetivo
+### 🟢 Nível Novato: Cadastro Inicial dos Territórios
 
-- Criar uma `struct` chamada `Territorio`.
-- Usar um **vetor estático de 5 elementos** para armazenar os territórios.
-- Cadastrar os dados de cada território: **Nome**, **Cor do Exército**, e **Número de Tropas**.
-- Exibir o estado atual do mapa.
+**Objetivo:** Criar uma base sólida com estruturas de dados e entrada/saída.
 
-### ⚙️ Funcionalidades
+**Funcionalidades:**
+- Definição de `struct Territorio` com nome, cor do exército e número de tropas
+- Vetor estático de 5 elementos para armazenar territórios
+- Interface de cadastro via terminal
+- Exibição formatada do mapa de territórios
 
-- Leitura de dados pelo terminal (`fgets` e `scanf`)
-- Impressão organizada dos dados de todos os territórios
+**Conceitos Abordados:**
+- `struct` (estruturas)
+- Arrays estáticos
+- Entrada/saída com `scanf`, `fgets` e `printf`
+- Manipulação de strings
 
-### 💡 Conceitos abordados
+---
 
-- `struct`
-- Vetor estático
-- Entrada/saída com `scanf`, `fgets`, e `printf`
+### 🔵 Nível Aventureiro: Batalhas Estratégicas
 
-### 📥 Entrada
+**Objetivo:** Implementar lógica de jogo com gerenciamento dinâmico de memória.
 
-O usuário digita o nome do território, a cor do exército dominante e o número de tropas para **cada um dos 5 territórios**.
+**Funcionalidades:**
+- Substituição do vetor estático por alocação dinâmica com `calloc`
+- Sistema de combate entre territórios
+- Simulação de dados de ataque e defesa com números aleatórios
+- Conquista de territórios baseada em batalhas
 
-### 📤 Saída
+**Conceitos Abordados:**
+- Ponteiros e referências
+- Alocação dinâmica de memória (`calloc`, `free`)
+- Geração de números aleatórios (`rand()`, `srand()`)
+- Funções e modularização básica
+- Lógica condicional complexa
 
+---
 
+### 🟣 Nível Mestre: Missões e Modularização Total
 
-## 🧗‍♂️ Nível Aventureiro: Batalhas Estratégicas
+**Objetivo:** Aplicar boas práticas de engenharia de software com código limpo e modular.
 
-### 🎯 Objetivo
+**Funcionalidades:**
+- Sistema completo de missões com objetivos variados
+- Menu interativo com múltiplas opções
+- Verificação automática de condições de vitória
+- Inicialização automática de territórios
+- Arquitetura completamente modularizada
 
-- Substituir o vetor estático por **alocação dinâmica com `calloc`**
-- Criar uma função para **simular ataques entre dois territórios**
-- Utilizar números aleatórios para representar dados de batalha
+**Conceitos Abordados:**
+- Modularização e separação de responsabilidades
+- `const` correctness (passagem por referência constante)
+- Design de funções especializadas
+- Game loop e estado do jogo
+- Passagem por valor vs. passagem por referência
 
-### 🆕 Novidades em relação ao Nível Novato
+---
 
-- Alocação dinâmica de memória com `calloc`
-- Uso de **ponteiros**
-- Laço interativo para o jogador escolher **territórios para atacar e defender**
-- Simulação de dados de ataque e defesa com `rand()`
+## 📖 Conceitos de Programação Consolidados
 
-### ⚙️ Funcionalidades
+Ao completar este desafio, os seguintes conceitos são praticados e consolidados:
 
-- Cadastro dos territórios (como no Nível Novato)
-- Fase de ataque com:
-  - Escolha de atacante e defensor
-  - Dados de ataque/defesa
-  - Lógica:
-    - Se atacante vence → defensor perde 1 tropa
-    - Se defensor perde todas → território é conquistado
-    - Empates favorecem o atacante
+### Fundamentos
+- ✅ Estruturas de dados (`struct`)
+- ✅ Arrays e vetores (estáticos e dinâmicos)
+- ✅ Entrada e saída formatada
+- ✅ Manipulação de strings
 
-### 💡 Conceitos abordados
+### Intermediário
+- ✅ Ponteiros e endereços de memória
+- ✅ Alocação e liberação dinâmica de memória
+- ✅ Funções e modularização
+- ✅ Números aleatórios
+- ✅ Lógica de controle de fluxo
 
-- Ponteiros
-- `calloc` / `free`
-- Aleatoriedade com `rand()` / `srand()`
-- Funções para modularização
+### Avançado
+- ✅ Arquitetura de software modular
+- ✅ Const correctness
+- ✅ Gerenciamento de estado de aplicação
+- ✅ Design patterns básicos (game loop)
+- ✅ Boas práticas de programação em C
 
-### 📥 Entrada
+---
 
-- Território **atacante** (1 a 5)
-- Território **defensor** (1 a 5)
+## 🎓 Informações Acadêmicas
 
-### 📤 Saída
+- **Instituição:** Universidade Estácio de Sá
+- **Curso:** Engenharia de Software
+- **Disciplina:** Estrutura de Dados
+- **Desenvolvedor:** Wilson Oliveira
 
-Exibição do resultado da batalha, dados sorteados e mudanças no mapa.
+---
 
+## 📝 Licença
 
+Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e distribuir conforme necessário.
 
-## 🧠 Nível Mestre: Missões e Modularização Total
+---
 
-### 🎯 Objetivo
+## 🚀 Próximos Passos
 
-- Dividir o código em funções bem definidas
-- Implementar um **sistema de missões**
-- Verificar cumprimento da missão
-- Aplicar **boas práticas** (uso de `const`, modularização, etc.)
+- [ ] Implementar Nível Novato
+- [ ] Implementar Nível Aventureiro
+- [ ] Implementar Nível Mestre
+- [ ] Adicionar testes unitários
+- [ ] Documentar código com comentários detalhados
 
-### 🆕 Diferenças em relação ao Nível Aventureiro
+---
 
-- Modularização total em funções
-- Missões aleatórias atribuídas:
-  1. Destruir o exército **Verde**
-  2. Conquistar **3 territórios**
-- Menu interativo com opções
-
-### ⚙️ Funcionalidades
-
-- Inicialização automática dos territórios
-- Menu principal com 3 opções:
-  1. Atacar
-  2. Verificar Missão
-  3. Sair
-- Verificação de vitória da missão
-
-### 💡 Conceitos abordados
-
-- Modularização
-- `const` correctness
-- Estruturação em múltiplas funções
-- Passagem por referência
-
-### 📥 Entrada
-
-- Ações do jogador via menu:
-  - `1` - Atacar
-  - `2` - Verificar Missão
-  - `0` - Sair
-- Escolha de territórios para ataque
-
-### 📤 Saída
-
-- Mapa atualizado
-- Resultados das batalhas
-- Verificação da missão
-- Mensagem de vitória
-
-
-
-## 🏁 Conclusão
-
-Com este **Desafio WAR Estruturado**, você praticará fundamentos essenciais da linguagem **C** de forma **divertida e progressiva**.
-
-Cada nível foca em um conjunto de habilidades:
-
-- 🟢 **Novato**: `struct`, vetor, entrada/saída
-- 🔵 **Aventureiro**: ponteiros, memória dinâmica, lógica de jogo
-- 🟣 **Mestre**: modularização, design limpo, sistema de missões
-
-
-
-🚀 **Boa sorte! Avance nos níveis e torne-se um mestre da programação estratégica!**
-
-> Equipe de Ensino – MateCheck
+⭐ **Desenvolvido como parte do aprendizado em Estrutura de Dados - Estácio de Sá**
